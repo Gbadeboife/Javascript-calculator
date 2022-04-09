@@ -101,8 +101,8 @@ class Calculator{
 
     compute(){
     let computation;
-    const prev =  parseInt(this.previousInput);
-    const cur = parseInt(this.currentInput);
+    const prev =  parseFloat(this.previousInput);
+    const cur = parseFloat(this.currentInput);
     switch(this.operation){
         case '+':
             computation=prev+cur;
