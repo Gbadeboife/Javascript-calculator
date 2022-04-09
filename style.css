@@ -1,0 +1,202 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    padding-top: 10vh;
+    font-family: sans-serif;
+}
+
+.calculator{
+    border-radius: 15px;
+    width: 350px;
+    margin: auto;
+    border: 3px solid black;
+    padding-top: 15px;
+    background-color: rgb(245, 245, 245);
+}
+
+
+button{
+    background-color: white;
+    border: none;
+    outline: none;
+}
+
+.keys{
+    box-sizing: border-box;
+}
+
+.grid-container{
+    display: grid;
+    height: 400px;
+    width: 350px;
+    grid-template-areas:
+    "add sub mul divs"
+    "nine eight seven del"
+    "six five four equ"
+    "three two one equ"
+    "dot zero clear equ" ;
+    justify-content: space-around;
+    align-content: space-around;
+}
+
+.grid-container div button{
+    font-size: 35px;
+    width: 100%;
+    border-radius: 50%;
+    height: 100%;
+    border: 1px solid black;
+    box-shadow: 0 0 15px rgb(148, 148, 148);
+}
+
+.grid-container div{
+    width: 70px;
+    height: 70px;
+    margin: auto;
+}
+
+.mul{
+    grid-area: mul; 
+}
+
+.add{
+    grid-area: add;
+}
+
+.sub{
+    grid-area: sub;
+}
+
+.divs{
+    grid-area: divs;
+}
+
+.equal{
+    grid-area: equ;
+    grid-row-start: 3;
+    grid-row-end: 6;
+}
+
+.grid-container div.equal {
+    height: 250px;
+}
+
+.grid-container div.equal button{
+    border-radius: 5px;
+}
+
+
+.del{
+    grid-area: del;
+}
+
+.grid-container .del button{
+    font-size: 30px;
+}
+
+
+.clear{
+    grid-area: clear;
+}
+
+.dot{
+    grid-area: dot;
+}
+
+.zero{
+    grid-area: zero;
+}
+
+.one{
+    grid-area: one;
+}
+
+.two{
+    grid-area: two;
+}
+
+.three{
+    grid-area: three;
+}
+
+.four{
+    grid-area: four;
+}
+
+.five{
+    grid-area: five;
+}
+
+.six{
+    grid-area: six;
+}
+
+.seven{
+    grid-area: seven;
+}
+
+.eight{
+    grid-area: eight;
+}
+
+.nine{
+    grid-area: nine;
+}
+
+
+.display{
+    background-color: rgb(78, 77, 77);
+    color: white;
+    margin: auto;
+    width: 92%;
+    height: 100px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+
+.currentOperand{
+    box-sizing: border-box;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    text-align: end;
+    font-size: 50px;
+}
+
+
+@media screen and (max-width:800px){
+    .calculator{
+        width: 250px;
+    }
+    .grid-container{
+        width: 250px;
+        height: 300px;
+    }
+    .grid-container div button{
+        font-size: 25px;
+    }
+    .grid-container div.equal{
+        height: 180px;
+    }
+    .grid-container .del button{
+        font-size: 25px;
+    }
+    .grid-container div{
+        width: 55px;
+        height: 55px;
+    }
+    .display{
+        height: 80px;
+    }
+    .currentOperand{
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width:250px){
+    body{
+        overflow-x: scroll;
+    }
+}
